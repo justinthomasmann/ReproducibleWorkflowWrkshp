@@ -1,0 +1,32 @@
+---
+title: "ReproducibleWorkflowWrkshp"
+author: "Justin Mann"
+date: "2/17/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(usethis)
+library(here)
+
+usethis::create_github_token()  # Create and copy your Personal Access Token (PAT) from GitHub
+gitcreds::gitcreds_set()        #  Log your PAT with your RStudio installation
+gh::gh_whoami()                 # verify PAT token, optional
+usethis::git_sitrep()           # verify PAT token, optional
+usethis::use_git_config(user.name = "justinthomasmann", user.email = "jmann5@binghamton.edu")  # use the email address you associated with GitHub
+gh::git_sitrep()                # verify PAT token, optional
+
+here()
+```
+
+
