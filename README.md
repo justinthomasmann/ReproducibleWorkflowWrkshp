@@ -6,3 +6,4 @@
 
 The goal of ReproducibleWorkflowWrkshp is to ...
 
+verify that I can create a GitHub repository from RStudio
